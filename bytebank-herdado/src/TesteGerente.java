@@ -15,5 +15,9 @@ public class TesteGerente {
         System.out.println(autenticou);
 
         System.out.println(g1.getBonificacao());
+
+        // Eu consigo criar pessoas do tipo autenticadas, basta elas terem assinado o contrato.
+        //fica da seguinte forma
+        Autenticavel referencia = new Cliente();
     }
 }
