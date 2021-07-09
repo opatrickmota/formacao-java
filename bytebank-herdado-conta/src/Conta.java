@@ -1,4 +1,4 @@
-public class Conta {
+public abstract class Conta {
     private double saldo;
     private int agencia;
     private int numero;
@@ -56,9 +56,7 @@ public class Conta {
         this.titular = titular;
     }
 
-    public void deposita(double valor){
-        this.saldo += valor;
-    }
+    public abstract void deposita(double valor);
 
     public boolean saca(double valor){
         if(this.saldo >= valor){
