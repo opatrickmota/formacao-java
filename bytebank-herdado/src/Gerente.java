@@ -1,12 +1,5 @@
-public class Gerente extends Funcionario{
-    private int senha;
+public class Gerente extends FuncionarioAutenticavel{
 
-    public boolean autentica(int senha){
-        if(this.senha == senha){
-            return true;
-        }
-        return false;
-    }
     //novo método, recebendo dois params. Isso é sobrecarga
     public boolean autentica(String login, int senha) {
         return true;
@@ -17,11 +10,4 @@ public class Gerente extends Funcionario{
         return super.getSalario();
     }
 
-    public int getSenha() {
-        return senha;
-    }
-
-    public void setSenha(int senha) {
-        this.senha = senha;
-    }
 }
