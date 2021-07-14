@@ -9,4 +9,9 @@ public class ContaPoupanca extends Conta {
     public void deposita(double valor) {
         super.setSaldo(super.getSaldo() + valor);
     }
+
+    @Override
+    public String toString() {
+        return "ContaPoupanca, " + super.toString();
+    }
 }

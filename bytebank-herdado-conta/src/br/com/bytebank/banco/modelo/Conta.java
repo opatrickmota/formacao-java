@@ -87,4 +87,9 @@ public abstract class Conta {
         saca(valor);
         destino.deposita(valor);
     }
+
+    @Override
+    public String toString() {
+        return "Numero:  " + this.numero + ", Agencia: "+this.agencia;
+    }
 }
