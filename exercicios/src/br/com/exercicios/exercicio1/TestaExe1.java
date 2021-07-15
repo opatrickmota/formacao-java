@@ -1,4 +1,4 @@
-package exe1;
+package br.com.exercicios.exercicio1;
 
 public class TestaExe1 {
     public static void main(String[] args) {

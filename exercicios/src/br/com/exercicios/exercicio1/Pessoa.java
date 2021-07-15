@@ -1,4 +1,4 @@
-package exe1;
+package br.com.exercicios.exercicio1;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
