@@ -1,6 +1,6 @@
 package br.com.bytebank.banco.teste;
 
-public class Teste {
+public class TesteArrayDePrimitivos {
     public static void main(String[] args) {
         int[] idades = new int[5];// inicializa o array com 0 - valor padrao do int
 
