@@ -9,7 +9,18 @@ public class Teste {
         String[] nomes = new String[5];
 
         int idade = 29; // primitivo
-        Integer idadeRef = new Integer(29); // int por baixo dos panos
+        Integer idadeRef = Integer.valueOf(29); // autoboxing
+        int valor = idadeRef.intValue(); // unboxing
+
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println(Integer.SIZE);
+        System.out.println(Integer.BYTES);
+
+        String numeroString = "10";
+        int numero = Integer.parseInt(numeroString);
+        System.out.println(numero);
+
+
         List<Integer> numeros = new ArrayList<Integer>(); // so é lista de referencias e nao de primitivos
         numeros.add(29); // Autoboxing (transformacao do primitivo para objeto)
     }
