@@ -1,10 +1,8 @@
 package br.com.exercicios.exercicio1;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 
 public class Pessoa {
     private String nome;
@@ -48,19 +46,15 @@ public class Pessoa {
         }
 
         try{
-            SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-            Date data = formato.parse(getDataNascimento());
-            Date hoje = new Date();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            LocalDate parseDate = LocalDate.parse(getDataNascimento(), formatter);
+            LocalDate today = LocalDate.now();
 
-            Calendar calendar = new GregorianCalendar();
-            calendar.setTime(data);
-            int anoNascimento = calendar.get(Calendar.YEAR);
-            calendar.setTime(hoje);
-            int anoAtual = calendar.get(Calendar.YEAR);
+            Period diff = Period.between(parseDate, today);
 
-            System.out.println("Idade: " + (anoAtual-anoNascimento)+" anos");
+            System.out.println("Idade: " + diff.getYears()+" anos");
 
-        }catch (ParseException ex) {
+        }catch (Exception ex) {
             ex.printStackTrace();
         }
 
