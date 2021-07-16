@@ -6,6 +6,7 @@ import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -45,10 +46,13 @@ public class Teste {
             System.out.println(conta);
         }
 
-        NumeroDaContaComparator comparator = new NumeroDaContaComparator();
-        TitularDaContaComparator titularComparator = new TitularDaContaComparator();
+        //NumeroDaContaComparator comparator = new NumeroDaContaComparator();
+        //TitularDaContaComparator titularComparator = new TitularDaContaComparator();
+        lista.sort(new TitularDaContaComparator());
+        // lista.sort(null); // assim usará a ordem natural, que é o compareTo da classe Conta
 
-        lista.sort(titularComparator);
+        //Antigamente era feito da seguinte forma, mas mudou pois nao era muito orientado a objeto
+        //Collections.sort(lista); // esta chamando internamente a ordem natural (chamando compareTo da Conta) nao sendo necessario passar um comparator
 
         System.out.println("==============");
 
@@ -73,12 +77,16 @@ class NumeroDaContaComparator implements Comparator<Conta>{
 
     @Override
     public int compare(Conta c1, Conta c2) {
-        if(c1.getNumero()<c2.getNumero()){
+        return Integer.compare(c1.getNumero(), c2.getNumero());
+
+        //return c1.getNumero() - c2.getNumero();
+
+        /*if(c1.getNumero()<c2.getNumero()){
             return -1;
         }
         if (c1.getNumero()> c2.getNumero()){
             return 1;
         }
-        return 0;
+        return 0;*/
     }
 }
