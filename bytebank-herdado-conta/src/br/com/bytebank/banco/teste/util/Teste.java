@@ -6,7 +6,6 @@ import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -42,51 +41,17 @@ public class Teste {
         lista.add(cc3);
         lista.add(cc4);
 
-        for (Conta conta: lista) {
-            System.out.println(conta);
-        }
+        lista.sort(( c1, c2) -> Integer.compare(c1.getNumero(), c2.getNumero()));
 
-        //NumeroDaContaComparator comparator = new NumeroDaContaComparator();
-        //TitularDaContaComparator titularComparator = new TitularDaContaComparator();
-        lista.sort(new TitularDaContaComparator());
-        // lista.sort(null); // assim usará a ordem natural, que é o compareTo da classe Conta
+        Comparator<Conta> comp = (Conta c1, Conta c2) -> {
+            String nomeC1 = c1.getTitular().getNome();
+            String nomeC2 = c2.getTitular().getNome();
+            return nomeC1.compareTo(nomeC2);
+        };
 
-        //Antigamente era feito da seguinte forma, mas mudou pois nao era muito orientado a objeto
-        //Collections.sort(lista); // esta chamando internamente a ordem natural (chamando compareTo da Conta) nao sendo necessario passar um comparator
+        lista.sort(comp);
 
-        System.out.println("==============");
+        lista.forEach((conta) -> System.out.println(conta + ", Titular: " + conta.getTitular().getNome()));
 
-        for (Conta conta: lista) {
-            System.out.println(conta + ", Titular: " + conta.getTitular().getNome());
-        }
-
-    }
-}
-
-class TitularDaContaComparator implements Comparator<Conta>{
-
-    @Override
-    public int compare(Conta c1, Conta c2) {
-        String nomeC1 = c1.getTitular().getNome();
-        String nomeC2 = c2.getTitular().getNome();
-        return nomeC1.compareTo(nomeC2);
-    }
-}
-
-class NumeroDaContaComparator implements Comparator<Conta>{
-
-    @Override
-    public int compare(Conta c1, Conta c2) {
-        return Integer.compare(c1.getNumero(), c2.getNumero());
-
-        //return c1.getNumero() - c2.getNumero();
-
-        /*if(c1.getNumero()<c2.getNumero()){
-            return -1;
-        }
-        if (c1.getNumero()> c2.getNumero()){
-            return 1;
-        }
-        return 0;*/
     }
 }
