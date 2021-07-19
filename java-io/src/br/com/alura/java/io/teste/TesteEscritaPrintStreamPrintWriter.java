@@ -2,7 +2,7 @@ package br.com.alura.java.io.teste;
 
 import java.io.*;
 
-public class TesteEscritaPrintStream {
+public class TesteEscritaPrintStreamPrintWriter {
     public static void main(String[] args) throws IOException {
 
         //BufferedWriter bw = new BufferedWriter(new FileWriter("lorem2.txt"));
