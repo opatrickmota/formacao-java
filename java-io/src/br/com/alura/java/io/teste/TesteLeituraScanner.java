@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class TesteLeitura2 {
+public class TesteLeituraScanner {
     public static void main(String[] args) throws Exception{
 
         Scanner scanner = new Scanner(new File("contas.csv"));
