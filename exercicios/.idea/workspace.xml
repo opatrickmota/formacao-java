@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4bf1bc7a-4df2-4bf2-b12a-90ba73ab1e96" name="Default Changelist" comment="" />
+    <list default="true" id="4bf1bc7a-4df2-4bf2-b12a-90ba73ab1e96" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +32,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../bytebank-herdado-conta" />
   </component>
-  <component name="RunManager" selected="Application.TesteControleRemoto">
+  <component name="RunManager" selected="Application.TesteControle">
     <configuration name="TestaExe1 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.exercicios.exercicio1.TestaExe1" />
       <module name="exercicios" />
@@ -44,12 +46,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestaExe1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exe1.TestaExe1" />
+    <configuration name="TesteControle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.exercicios.exercicio5.TesteControle" />
       <module name="exercicios" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="exe1.*" />
+          <option name="PATTERN" value="br.com.exercicios.exercicio5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -98,11 +100,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TesteControle" />
         <item itemvalue="Application.TesteControleRemoto" />
         <item itemvalue="Application.TestaExe1 (1)" />
         <item itemvalue="Application.TesteExercicio3" />
         <item itemvalue="Application.TesteExercicio2" />
-        <item itemvalue="Application.TestaExe1" />
       </list>
     </recent_temporary>
   </component>
