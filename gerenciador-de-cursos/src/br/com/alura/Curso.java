@@ -1,10 +1,6 @@
 package br.com.alura;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Curso {
 
@@ -12,6 +8,7 @@ public class Curso {
     private String instrutor;
     private List<Aula> aulas = new ArrayList<>();
     private Set<Aluno> alunos = new HashSet<>();
+    private Map<Integer, Aluno> matriculaParaAluno = new HashMap<>();
 
     public Curso(String nome, String instrutor) {
         this.nome = nome;
@@ -45,6 +42,7 @@ public class Curso {
 
     public void matricula(Aluno aluno) {
         this.alunos.add(aluno);
+        this.matriculaParaAluno.put(aluno.getNumeroMatricula(), aluno);
     }
 
     public Set<Aluno> getAlunos(){
@@ -53,5 +51,9 @@ public class Curso {
 
     public boolean estaMatriculado(Aluno aluno) {
         return this.alunos.contains(aluno);
+    }
+
+    public Aluno buscaMatriculado(int numero) {
+        return matriculaParaAluno.get(numero);
     }
 }
