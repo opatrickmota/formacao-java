@@ -6,7 +6,7 @@ public class Caminhao {
 
     private String tipo;
     private int numeroPluviometros;
-    private ArrayList<String> lista = new ArrayList<String>();
+    private ArrayList<String> listaPluviometro = new ArrayList<String>();
 
     public String getTipo() {
         return tipo;
@@ -24,11 +24,11 @@ public class Caminhao {
         this.numeroPluviometros = numeroPluviometros;
     }
 
-    public ArrayList<String> getLista() {
-        return lista;
+    public ArrayList<String> getListaPluviometro() {
+        return listaPluviometro;
     }
 
     public void setLista(ArrayList<String> lista) {
-        this.lista = lista;
+        this.listaPluviometro = lista;
     }
 }
