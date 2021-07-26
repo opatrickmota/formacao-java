@@ -2,7 +2,7 @@ package br.com.exercicios.exercicio5;
 
 import java.util.ArrayList;
 
-public class ControleHerdeira extends Controle{
+public class Seleciona extends Controle{
 
     private static ArrayList<Caminhao> caminhoes = new ArrayList<>();
 
