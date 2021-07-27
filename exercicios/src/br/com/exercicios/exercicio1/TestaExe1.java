@@ -1,15 +1,13 @@
 package br.com.exercicios.exercicio1;
 
+import java.math.BigDecimal;
+
 public class TestaExe1 {
     public static void main(String[] args) {
-        Pessoa pessoa = new Pessoa();
+        Exercicio exercicio = new Exercicio("Aline", "01/05/2005", new BigDecimal("1.65"));
 
-        pessoa.setAltura(1.65);
-        pessoa.setNome("Aline");
-        pessoa.setDataNascimento("01/05/2005");
+        exercicio.imprimirDados();
 
-        pessoa.imprimirDados();
-        pessoa.calcularIdade();
-
+        exercicio.calcularIdade();
     }
 }

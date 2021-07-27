@@ -1,36 +1,16 @@
 package br.com.exercicios.exercicio1;
 
+import br.com.exercicios.objeto.Pessoa;
+
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 
-public class Pessoa {
-    private String nome;
-    private String dataNascimento;
-    private double altura;
+public class Exercicio extends Pessoa{
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
-    public double getAltura() {
-        return altura;
-    }
-
-    public void setAltura(double altura) {
-        this.altura = altura;
+    public Exercicio(String nome, String dataNascimento, BigDecimal altura) {
+        super(nome, dataNascimento, altura);
     }
 
     public void imprimirDados(){
@@ -40,14 +20,13 @@ public class Pessoa {
     }
 
     public void calcularIdade(){
-        if(getDataNascimento() == null){
+        if(isValidData()){
             System.out.println("Informe a data de nascimento antes de tentar calcular a idade.");
             return;
         }
 
         try{
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-            LocalDate parseDate = LocalDate.parse(getDataNascimento(), formatter);
+            LocalDate parseDate = formatterData();
             LocalDate today = LocalDate.now();
 
             Period diff = Period.between(parseDate, today);
@@ -58,6 +37,15 @@ public class Pessoa {
             ex.printStackTrace();
         }
 
+    }
 
+    private LocalDate formatterData() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate parseDate = LocalDate.parse(getDataNascimento(), formatter);
+        return parseDate;
+    }
+
+    private boolean isValidData() {
+        return getDataNascimento() == null;
     }
 }

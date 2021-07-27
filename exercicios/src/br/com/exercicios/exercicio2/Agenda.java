@@ -1,57 +1,58 @@
 package br.com.exercicios.exercicio2;
 
+import br.com.exercicios.objeto.Pessoa;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Agenda extends Pessoa {
-    private Pessoa[] pessoas = new Pessoa[10];
+    private ArrayList<Pessoa> pessoas = new ArrayList<>();
     private int posicaoLivre = 0;
 
-    public void armazenaPessoas(String nome, int idade, float altura){
-        pessoas[posicaoLivre] = new Pessoa();
-        pessoas[posicaoLivre].setAltura(altura);
-        pessoas[posicaoLivre].setIdade(idade);
-        pessoas[posicaoLivre].setNome(nome);
-        posicaoLivre++;
+    public void armazenaPessoas(String nome, int idade, BigDecimal altura){
+        if (isMaximunSizeReached()){
+            System.out.println("Tamanho máximo atingindo!");
+            return;
+        }
+        pessoas.add(new Pessoa(nome, idade, altura));
+    }
+
+    private boolean isMaximunSizeReached() {
+        return pessoas.size() == 10;
     }
 
     public void removePessoa(String nome){
-        int indice = buscaPessoa(nome);
-        for (int i = 0; i < posicaoLivre ; i++){
-            if(i >= indice){
-                if(pessoas[i+1] == null){
-                    pessoas[i] = null;
-                    posicaoLivre -= 1;
-                }else{
-                    pessoas[i] = pessoas[i+1];
-                }
-            }
-        }
+        pessoas.remove(buscaPessoa(nome));
     }
 
     public int buscaPessoa(String nome){
-        int i;
-        for(i=0;i<posicaoLivre;i++){
-            if(pessoas[i].getNome() == nome){
-                break;
-            }
-        }
-        return i;
+        List<Pessoa> pessoaFiltrada = pessoas.stream().filter(pessoa -> pessoa.getNome() == nome).collect(Collectors.toList());
+
+        return pessoas.indexOf(pessoaFiltrada.get(0));
     }
 
     public void imprimeAgenda(){
-        for (int i=0;i<posicaoLivre;i++){
-            System.out.println(pessoas[i].getNome());
-            System.out.println(pessoas[i].getIdade());
-            System.out.println(pessoas[i].getAltura());
-        }
+        pessoas.forEach(pessoa -> {
+            System.out.println(pessoa.getNome());
+            System.out.println(pessoa.getIdade());
+            System.out.println(pessoa.getAltura());
+        });
     }
 
     public void imprimePessoa(int index){
-        if(pessoas[index] == null){
+        if(personNotExist(index)){
             System.out.println("Não existe ninguem nessa posição");
             return;
         }
-        System.out.println(pessoas[index].getNome());
-        System.out.println(pessoas[index].getAltura());
-        System.out.println(pessoas[index].getIdade());
+        System.out.println(pessoas.get(index).getNome());
+        System.out.println(pessoas.get(index).getAltura());
+        System.out.println(pessoas.get(index).getIdade());
+    }
+
+    private boolean personNotExist(int index) {
+        return pessoas.get(index) == null;
     }
 
 }
