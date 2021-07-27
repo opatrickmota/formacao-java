@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 
 public class Agenda extends Pessoa {
     private ArrayList<Pessoa> pessoas = new ArrayList<>();
-    private int posicaoLivre = 0;
 
     public void armazenaPessoas(String nome, int idade, BigDecimal altura){
         if (isMaximunSizeReached()){
@@ -28,9 +27,9 @@ public class Agenda extends Pessoa {
     }
 
     public int buscaPessoa(String nome){
-        List<Pessoa> pessoaFiltrada = pessoas.stream().filter(pessoa -> pessoa.getNome() == nome).collect(Collectors.toList());
+        List<Pessoa> pessoasEncontradas = pessoas.stream().filter(pessoa -> pessoa.getNome() == nome).collect(Collectors.toList());
 
-        return pessoas.indexOf(pessoaFiltrada.get(0));
+        return pessoas.indexOf(pessoasEncontradas.get(0));
     }
 
     public void imprimeAgenda(){
