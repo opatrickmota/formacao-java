@@ -3,9 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="4bf1bc7a-4df2-4bf2-b12a-90ba73ab1e96" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/exercicios/exercicio2/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/exercicios/exercicio2/Agenda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/exercicios/exercicio3/Elevador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/exercicios/objeto/Elevador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/exercicios/exercicio3/TesteExercicio3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/exercicios/exercicio3/TesteExercicio3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/exercicios/br/com/exercicios/exercicio3/Exercicio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/exercicios/br/com/exercicios/exercicio3/Exercicio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/exercicios/br/com/exercicios/exercicio4/ControleRemoto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/exercicios/br/com/exercicios/exercicio4/ControleRemoto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/exercicios/br/com/exercicios/exercicio4/Televisao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/exercicios/br/com/exercicios/exercicio5/Caminhao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/exercicios/br/com/exercicios/exercicio5/Controle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/exercicios/br/com/exercicios/exercicio5/Controle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/exercicios/br/com/exercicios/exercicio5/Seleciona.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/exercicios/br/com/exercicios/exercicio5/Seleciona.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/exercicios/exercicio3/Exercicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/exercicios/exercicio3/Exercicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/exercicios/exercicio4/ControleRemoto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/exercicios/exercicio4/ControleRemoto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/exercicios/exercicio4/Televisao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/exercicios/objeto/Televisao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/exercicios/exercicio5/Caminhao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/exercicios/objeto/Caminhao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/exercicios/exercicio5/Controle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/exercicios/exercicio5/Controle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/exercicios/exercicio5/Seleciona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/exercicios/exercicio5/Seleciona.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../maven-gerenciamento-dependencias" />
   </component>
-  <component name="RunManager" selected="Application.TesteExercicio3">
+  <component name="RunManager" selected="Application.TesteControle">
     <configuration name="TestaExe1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.exercicios.exercicio1.TestaExe1" />
       <module name="exercicios" />
@@ -54,7 +63,7 @@
       <module name="exercicios" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.exercicios.exercicio5.*" />
+          <option name="PATTERN" value="br.com.exercicios.objeto.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -67,7 +76,7 @@
       <module name="exercicios" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.exercicios.exercicio4.*" />
+          <option name="PATTERN" value="br.com.exercicios.objeto.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,10 +112,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TesteExercicio3" />
+        <item itemvalue="Application.TesteControle" />
         <item itemvalue="Application.TestaExe1 (1)" />
         <item itemvalue="Application.TesteExercicio2" />
-        <item itemvalue="Application.TesteControle" />
+        <item itemvalue="Application.TesteExercicio3" />
         <item itemvalue="Application.TesteControleRemoto" />
       </list>
     </recent_temporary>

@@ -1,4 +1,4 @@
-package br.com.exercicios.exercicio4;
+package br.com.exercicios.objeto;
 
 public class Televisao {
     private int volume;

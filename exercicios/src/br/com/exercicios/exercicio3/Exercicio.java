@@ -6,29 +6,31 @@ import br.com.exercicios.objeto.Pessoa;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Exercicio extends Elevador {
+public class Exercicio {
+    private Elevador elevador;
 
     public Exercicio(int capacidadeDoElevador, int totalDeAndares) {
-        setCapacidadeDoElevador(capacidadeDoElevador);
-        setTotalDeAndares(totalDeAndares);
+        elevador = new Elevador();
+        elevador.setCapacidadeDoElevador(capacidadeDoElevador);
+        elevador.setTotalDeAndares(totalDeAndares);
     }
 
     public void entra(Pessoa pessoa){
-        if(getCapacidadeDoElevador() <= getPessoas().size()){
+        if(elevador.getCapacidadeDoElevador() <= elevador.getPessoas().size()){
             System.out.println("O elevador está cheio!");
             return;
         }
-        setPessoas(pessoa);
-        System.out.println("O total de pessoas no andar agora é de " + getPessoas().size()+ " pessoa(s)");
+        elevador.setPessoas(pessoa);
+        System.out.println("O total de pessoas no andar agora é de " + elevador.getPessoas().size()+ " pessoa(s)");
     }
 
     public void sai(Pessoa pessoa){
-        if(getPessoas().size() == 0){
+        if(elevador.getPessoas().size() == 0){
             System.out.println("Não há ninguém no elevador!");
             return;
         }
 
-        List<Pessoa> pessoasEncontradas = getPessoas()
+        List<Pessoa> pessoasEncontradas = elevador.getPessoas()
                 .stream()
                 .filter(p ->
                         p.getNome() == pessoa.getNome()
@@ -36,32 +38,32 @@ public class Exercicio extends Elevador {
                 .collect(Collectors.toList());
 
         if (!pessoasEncontradas.isEmpty()){
-            getPessoas().remove(pessoasEncontradas.get(0));
+            elevador.getPessoas().remove(pessoasEncontradas.get(0));
         }
-        System.out.println("O total de pessoas no andar agora é de " + getPessoas().size() + " pessoa(s)");
+        System.out.println("O total de pessoas no andar agora é de " + elevador.getPessoas().size() + " pessoa(s)");
     }
 
     public void sobe(){
-        if(getAndarAtual() == getTotalDeAndares()){
+        if(elevador.getAndarAtual() == elevador.getTotalDeAndares()){
             System.out.println("Você já está no último andar!");
             return;
         }
-        setAndarAtual(getAndarAtual()+1);
-        System.out.println("Você agora está no andar: " + getAndarAtual());
+        elevador.setAndarAtual(elevador.getAndarAtual()+1);
+        System.out.println("Você agora está no andar: " + elevador.getAndarAtual());
     }
 
     public void desce(){
-        if(getAndarAtual() == 0){
+        if(elevador.getAndarAtual() == 0){
             System.out.println("Você já está no térreo!");
             return;
         }
-        setAndarAtual(getAndarAtual()-1);
-        System.out.println("Você agora está no andar: " + getAndarAtual());
+        elevador.setAndarAtual(elevador.getAndarAtual()-1);
+        System.out.println("Você agora está no andar: " + elevador.getAndarAtual());
     }
 
     public void imprimePessoasNoElevador(){
         System.out.println("Pessoas no elevador");
-        getPessoas().forEach(pessoa -> {
+        elevador.getPessoas().forEach(pessoa -> {
             System.out.println(pessoa.getNome());
         });
     }

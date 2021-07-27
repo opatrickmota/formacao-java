@@ -1,5 +1,7 @@
 package br.com.exercicios.exercicio5;
 
+import br.com.exercicios.objeto.Caminhao;
+
 import java.util.ArrayList;
 
 public class Seleciona extends Controle{
@@ -12,7 +14,7 @@ public class Seleciona extends Controle{
 
         while (tipo.compareTo("Fim")!=0){
             Caminhao caminhao = new Caminhao();
-            ArrayList<String> tipoPluviometro = new ArrayList<>();
+            ArrayList<String> tiposPluviometros = new ArrayList<>();
 
             while (tipo.compareTo("Alfa") != 0  && tipo.compareTo("Beta") != 0 && tipo.compareTo("Fim")!=0){
                 tipo = leString("Escreva o tipo do caminhao, sendo possivel 'Alfa' ou 'Beta'.");
@@ -30,9 +32,9 @@ public class Seleciona extends Controle{
             caminhao.setNumeroPluviometros(numeroPluviometros);
 
             for (int i = 0; i<numeroPluviometros; i++){
-                tipoPluviometro.add(leString("Informe o " +(i+1)+ "° pluviometro:"));
+                tiposPluviometros.add(leString("Informe o " +(i+1)+ "° pluviometro:"));
             }
-            caminhao.setLista(tipoPluviometro);
+            caminhao.setLista(tiposPluviometros);
 
             caminhoes.add(caminhao);
 
@@ -48,11 +50,11 @@ public class Seleciona extends Controle{
             System.out.println("Não há dados para ser impresso!");
             return;
         }
-        for (int i=0;i<caminhoes.size();i++){
-            System.out.println("Tipo do caminhão: "+caminhoes.get(i).getTipo());
-            System.out.println("Há "+caminhoes.get(i).getNumeroPluviometros()+" pluviometro(s), sendo ele(s):");
-            caminhoes.get(i).getListaPluviometro().forEach(p -> System.out.println(p));
+        caminhoes.forEach(caminhao -> {
+            System.out.println("Tipo do caminhão: "+caminhao.getTipo());
+            System.out.println("Há "+caminhao.getNumeroPluviometros()+" pluviometro(s), sendo ele(s):");
+            caminhao.getListaPluviometro().forEach(p -> System.out.println(p));
             System.out.println("--------");
-        }
+        });
     }
 }

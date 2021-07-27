@@ -12,7 +12,6 @@ public class Controle {
     }
 
     public static int leInteiro(String texto){
-        boolean isNotInt = true;
         int inteiro = -1;
 
         System.out.println(texto);
@@ -22,7 +21,6 @@ public class Controle {
 
         try{
             inteiro = Integer.parseInt(linha);
-            isNotInt = false;
         }catch (Exception ex){
             System.out.println("Você não digitou um número inteiro positivo!");
         }

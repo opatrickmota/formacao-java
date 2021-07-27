@@ -1,5 +1,7 @@
 package br.com.exercicios.exercicio4;
 
+import br.com.exercicios.objeto.Televisao;
+
 public class ControleRemoto {
     private Televisao televisao;
 
@@ -24,6 +26,10 @@ public class ControleRemoto {
     }
 
     public void trocarCanal(int numero){
+        if(televisao.getCanal() < 1){
+            System.out.println("Canal inválido");
+            return;
+        }
         televisao.setCanal(numero);
     }
 
@@ -34,6 +40,7 @@ public class ControleRemoto {
     public void diminuirCanal(){
         if(televisao.getCanal()==1){
             System.out.println("Você já está no primeiro canal!");
+            return;
         }
         televisao.setCanal(televisao.getCanal()-1);
     }

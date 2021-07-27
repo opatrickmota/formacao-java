@@ -1,4 +1,4 @@
-package br.com.exercicios.exercicio5;
+package br.com.exercicios.objeto;
 
 import java.util.ArrayList;
 
