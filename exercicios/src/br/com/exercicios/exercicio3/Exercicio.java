@@ -33,7 +33,9 @@ public class Exercicio {
         List<Pessoa> pessoasEncontradas = elevador.getPessoas()
                 .stream()
                 .filter(p ->
-                        p.getNome() == pessoa.getNome()
+                        p.getNome().compareTo(pessoa.getNome()) == 0
+                                && p.getAltura().compareTo(pessoa.getAltura()) == 0
+                                && p.getIdade() == pessoa.getIdade()
                 )
                 .collect(Collectors.toList());
 
