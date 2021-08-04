@@ -10,25 +10,24 @@ public class Seleciona extends Controle{
 
     public static void armazenaCaminhao(){
 
-        String tipo = leString("Escreva o tipo do caminhao, sendo possivel 'Alfa' ou 'Beta'.");
+        String tipo = leString("Escreva o tipo do caminhao, sendo possivel 'Alfa' ou 'Beta'. Para sair escreva 'Fim'.");
 
-        while (tipo.compareTo("Fim")!=0){
+        while (naoEhFim(tipo)){
             Caminhao caminhao = new Caminhao();
             ArrayList<String> tiposPluviometros = new ArrayList<>();
 
-            while (tipo.compareTo("Alfa") != 0  && tipo.compareTo("Beta") != 0 && tipo.compareTo("Fim")!=0){
-                tipo = leString("Escreva o tipo do caminhao, sendo possivel 'Alfa' ou 'Beta'.");
-                if(tipo.compareTo("Fim") == 0){
-                    imprimir(caminhoes);
-                    return;
-                }
+            tipo = lerTipoAteSerUmValido(tipo);
+
+            if(tipo.compareTo("Fim") == 0){
+                return;
             }
+
             caminhao.setTipo(tipo);
 
             int numeroPluviometros = leInteiro("Informe o número de pluviômetros");
-            while(numeroPluviometros < 0){
-                numeroPluviometros = leInteiro("Informe o número de pluviômetros");
-            }
+
+            numeroPluviometros = lerNumeroPluviometrosAteSerPositivoInteiro(numeroPluviometros);
+
             caminhao.setNumeroPluviometros(numeroPluviometros);
 
             for (int i = 0; i<numeroPluviometros; i++){
@@ -38,12 +37,35 @@ public class Seleciona extends Controle{
 
             caminhoes.add(caminhao);
 
-            tipo = leString("Escreva o tipo do caminhao, sendo possivel 'Alfa' ou 'Beta'.");
+            tipo = leString("Escreva o tipo do caminhao, sendo possivel 'Alfa' ou 'Beta'. Para sair escreva 'Fim'.");
         }
 
         imprimir(caminhoes);
 
     }
+
+    private static String lerTipoAteSerUmValido(String tipo) {
+        while (isIncorrectInput(tipo)){
+            tipo = leString("Escreva o tipo do caminhao, sendo possivel 'Alfa' ou 'Beta'. Para sair escreva 'Fim'.");
+        }
+        return tipo;
+    }
+
+    private static int lerNumeroPluviometrosAteSerPositivoInteiro(int numeroPluviometros) {
+        while(numeroPluviometros < 0){
+            numeroPluviometros = leInteiro("Informe o número de pluviômetros");
+        }
+        return numeroPluviometros;
+    }
+
+    private static boolean isIncorrectInput(String tipo) {
+        return tipo.compareTo("Alfa") != 0 && tipo.compareTo("Beta") != 0 && tipo.compareTo("Fim") != 0;
+    }
+
+    private static boolean naoEhFim(String tipo) {
+        return tipo.compareTo("Fim")!=0;
+    }
+
     public static void imprimir(ArrayList<Caminhao> caminhoes){
         System.out.println("======= Imprimindo Dados =======");
         if(caminhoes.isEmpty()){

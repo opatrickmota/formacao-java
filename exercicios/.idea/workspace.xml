@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4bf1bc7a-4df2-4bf2-b12a-90ba73ab1e96" name="Default Changelist" comment="" />
+    <list default="true" id="4bf1bc7a-4df2-4bf2-b12a-90ba73ab1e96" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/exercicios/exercicio5/Seleciona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/exercicios/exercicio5/Seleciona.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,9 +31,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="extract.method.default.visibility" value="public" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/forum" />
   </component>
-  <component name="RunManager" selected="Application.TesteExercicio3">
+  <component name="RunManager" selected="Application.TesteControle">
     <configuration name="TestaExe1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.exercicios.exercicio1.TestaExe1" />
       <module name="exercicios" />
@@ -98,8 +102,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TesteExercicio3" />
         <item itemvalue="Application.TesteControle" />
+        <item itemvalue="Application.TesteExercicio3" />
         <item itemvalue="Application.TesteExercicio2" />
         <item itemvalue="Application.TesteControleRemoto" />
       </list>
