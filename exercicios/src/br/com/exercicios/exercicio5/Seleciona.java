@@ -75,7 +75,7 @@ public class Seleciona extends Controle{
         caminhoes.forEach(caminhao -> {
             System.out.println("Tipo do caminhão: "+caminhao.getTipo());
             System.out.println("Há "+caminhao.getNumeroPluviometros()+" pluviometro(s), sendo ele(s):");
-            caminhao.getListaPluviometro().forEach(p -> System.out.println(p));
+            caminhao.getListaPluviometro().forEach(System.out::println);
             System.out.println("--------");
         });
     }
