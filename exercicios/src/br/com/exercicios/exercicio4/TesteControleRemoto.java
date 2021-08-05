@@ -4,19 +4,19 @@ public class TesteControleRemoto {
     public static void main(String[] args) {
         ControleRemoto controleRemoto = new ControleRemoto();
 
-        controleRemoto.consultarVolume();
-        controleRemoto.consultarCanal();
+        controleRemoto.consultaVolume();
+        controleRemoto.consultaCanal();
 
-        controleRemoto.diminuirCanal();
-        controleRemoto.diminuirVolume();
+        controleRemoto.diminuiCanal();
+        controleRemoto.diminuiVolume();
 
-        controleRemoto.consultarVolume();
-        controleRemoto.consultarCanal();
+        controleRemoto.consultaVolume();
+        controleRemoto.consultaCanal();
 
-        controleRemoto.aumentarCanal();
-        controleRemoto.aumentarVolume();
+        controleRemoto.aumentaCanal();
+        controleRemoto.aumentaVolume();
 
-        controleRemoto.consultarVolume();
-        controleRemoto.consultarCanal();
+        controleRemoto.consultaVolume();
+        controleRemoto.consultaCanal();
     }
 }

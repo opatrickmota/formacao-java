@@ -18,7 +18,8 @@ public class Seleciona extends Controle{
 
             tipo = lerTipoAteSerUmValido(tipo);
 
-            if(tipo.compareTo("Fim") == 0){
+            if("Fim".compareTo(tipo) == 0){
+                imprimir(caminhoes);
                 return;
             }
 
@@ -59,11 +60,11 @@ public class Seleciona extends Controle{
     }
 
     private static boolean isIncorrectInput(String tipo) {
-        return tipo.compareTo("Alfa") != 0 && tipo.compareTo("Beta") != 0 && tipo.compareTo("Fim") != 0;
+        return "Alfa".compareTo(tipo) != 0 && "Beta".compareTo(tipo) != 0 && "Fim".compareTo(tipo) != 0;
     }
 
     private static boolean naoEhFim(String tipo) {
-        return tipo.compareTo("Fim")!=0;
+        return "Fim".compareTo(tipo)!=0;
     }
 
     public static void imprimir(ArrayList<Caminhao> caminhoes){

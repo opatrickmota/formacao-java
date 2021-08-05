@@ -9,7 +9,7 @@ public class ControleRemoto {
         televisao = new Televisao();
     }
 
-    public void aumentarVolume(){
+    public void aumentaVolume(){
         if(televisao.getVolume() == 100){
             System.out.println("A televisão já está no volume máximo!");
             return;
@@ -17,7 +17,7 @@ public class ControleRemoto {
         televisao.setVolume(televisao.getVolume()+1);
     }
 
-    public void diminuirVolume(){
+    public void diminuiVolume(){
         if(televisao.getVolume() == 0){
             System.out.println("A televisão já está no volume mínimo!");
             return;
@@ -25,7 +25,7 @@ public class ControleRemoto {
         televisao.setVolume(televisao.getVolume()-1);
     }
 
-    public void trocarCanal(int numero){
+    public void trocaCanal(int numero){
         if(televisao.getCanal() < 1){
             System.out.println("Canal inválido");
             return;
@@ -33,11 +33,11 @@ public class ControleRemoto {
         televisao.setCanal(numero);
     }
 
-    public void aumentarCanal(){
+    public void aumentaCanal(){
         televisao.setCanal(televisao.getCanal()+1);
     }
 
-    public void diminuirCanal(){
+    public void diminuiCanal(){
         if(televisao.getCanal()==1){
             System.out.println("Você já está no primeiro canal!");
             return;
@@ -45,11 +45,11 @@ public class ControleRemoto {
         televisao.setCanal(televisao.getCanal()-1);
     }
 
-    public void consultarVolume(){
+    public void consultaVolume(){
         System.out.println("Volume: " + televisao.getVolume());
     }
 
-    public void consultarCanal(){
+    public void consultaCanal(){
         System.out.println("Canal: " + televisao.getCanal());
     }
 }
